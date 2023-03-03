@@ -2,7 +2,7 @@
 '''
 A simple program for measuring the runtime of sorting algorithms.
 '''
-
+from tabulate import tabulate
 import timeit
 import random
 
@@ -51,5 +51,5 @@ if __name__ == '__main__':
         # All runtimes should be displayed in seconds using scientific notation and three significant figures.
         # You will have to look up how to do this formatting.
         # In order to get a proper markdown table,
-        # you will have to also print a header line somewhere else.
-        print(f'len(xs)=2**{x} runtimes={runtimes}')
+        # will have to also print a header line somewhere else.
+        print(f"|  {runtimes['timsort']:0.2E}  |  {runtimes['merge_sorted']:0.2E} | {runtimes['quick_sorted']:0.2E} |")
