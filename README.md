@@ -114,17 +114,30 @@ $ python3 runtimes.py --max_x=22
 ```
 and copy/paste the resulting table into this README file below this line.
 
-|  4.37E-06  |  2.22E-06 | 2.77E-06 |
-
-|  2.18E-06  |  7.63E-06 | 1.08E-05 |
-
-|  2.12E-06  |  1.50E-05 | 1.64E-05 |
-
-|  2.69E-06  |  3.45E-05 | 3.66E-05 |
-
-|  4.08E-06  |  7.88E-05 | 8.25E-05 |
-
-|  6.63E-06  |  1.77E-04 | 1.90E-04 |
+|                 | timsort    | merge_sorted | quick_sorted |
+| len(xs) = 2**0  |  4.42E-06  |   2.75E-06   | 2.91E-06     |
+| len(xs) = 2**1  |  2.88E-06  |   8.51E-06   | 1.21E-05     |
+| len(xs) = 2**2  |  2.67E-06  |   1.66E-05   | 1.71E-05     |
+| len(xs) = 2**3  |  3.32E-06  |   3.50E-05   | 3.59E-05     |
+| len(xs) = 2**4  |  4.88E-06  |   9.16E-05   | 7.68E-05     |
+| len(xs) = 2**5  |  7.19E-06  |   1.62E-04   | 1.77E-04     |
+| len(xs) = 2**6  |  1.46E-05  |   3.39E-04   | 4.74E-04     | 
+| len(xs) = 2**7  |  2.79E-05  |   8.35E-04   | 1.03E-03     |
+| len(xs) = 2**8  |  6.20E-05  |   1.88E-03   | 2.40E-03     |
+| len(xs) = 2**9  |  1.43E-04  |   4.05E-03   | 5.24E-03     |
+| len(xs) = 2**10 |  2.80E-04  |   8.85E-03   | 1.19E-02     |
+| len(xs) = 2**11 |  6.70E-04  |   1.94E-02   | 2.47E-02     |
+| len(xs) = 2**12 |  1.52E-03  |   4.22E-02   | 5.29E-02     |
+| len(xs) = 2**13 |  3.18E-03  |   9.20E-02   | 1.22E-01     |
+| len(xs) = 2**14 |  6.83E-03  |   1.97E-01   | 2.54E-01     |
+| len(xs) = 2**15 |  1.54E-02  |   4.43E-01   | 4.93E-01     |
+| len(xs) = 2**16 |  3.54E-02  |   8.92E-01   | 1.17E+00     |
+| len(xs) = 2**17 |  7.85E-02  |   1.93E+00   | 2.27E+00     |
+| len(xs) = 2**18 |  1.86E-01  |   4.04E+00   | 5.40E+00     |
+| len(xs) = 2**19 |  4.29E-01  |   8.83E+00   | 1.09E+01     |
+| len(xs) = 2**20 |  9.05E-01  |   1.80E+01   | 2.39E+01     |
+| len(xs) = 2**21 |  2.18E+00  |   3.84E+01   | 5.29E+01     |
+| len(xs) = 2**22 |  4.90E+00  |   8.25E+01   | 1.20E+02     |
 
 You should observe that python's built-in sort function is 10-100x faster than yours.
 All functions have the same wort-case asymptotic complexity (i.e. $\Theta(n \log n)$),
@@ -134,7 +147,7 @@ and so the built-in function is written in the C programming language.
 (You can find the [source code of the built-in function on github](https://github.com/python/cpython/blob/c1b1f51cd1632f0b77dacd43092fb44ed5e053a9/Python/bltinmodule.c#L2356)).
 Functions that must be very fast are generally written in C instead of Python.
 One of the differences between a *computer sciencee* major and a *data science* major is that the CS major focuses on how to *write* these fast functions,
-and the DS major focuses on how to *use* these fast functions to accomplish interesting tasks.
+https://app.wallstreetsurvivor.com/admin/currentrankingsand the DS major focuses on how to *use* these fast functions to accomplish interesting tasks.
 
 <!--
 For fun, compare the runtimes of your sorting algorithms to your partner's to see who has the fastest implementation.

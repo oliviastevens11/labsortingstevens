@@ -20,6 +20,8 @@ if __name__ == '__main__':
     parser.add_argument('--input', choices=['sorted', 'random'], default='random')
     args = parser.parse_args()
 
+    print(f"|          | timsort | merge_sorted | quick_sorted |")
+
     # perform the runtime tests
     for x in range(0, args.max_x+1):
 
@@ -38,7 +40,6 @@ if __name__ == '__main__':
             # your specific task is to make xs be a list of all numbers between 0 and 2**x
             xs = list(range(2**x))
             #xs = FIXME
-
         # calculate the runtimes
         runtimes = {}
         runtimes['timsort'] = timeit.timeit(lambda: sorted(xs), number=1)
@@ -52,4 +53,4 @@ if __name__ == '__main__':
         # You will have to look up how to do this formatting.
         # In order to get a proper markdown table,
         # will have to also print a header line somewhere else.
-        print(f"|  {runtimes['timsort']:0.2E}  |  {runtimes['merge_sorted']:0.2E} | {runtimes['quick_sorted']:0.2E} |")
+        print(f"| len(xs) = 2**{x} |  {runtimes['timsort']:0.2E}  |  {runtimes['merge_sorted']:0.2E} | {runtimes['quick_sorted']:0.2E} |")
