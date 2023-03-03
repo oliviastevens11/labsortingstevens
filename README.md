@@ -115,10 +115,15 @@ $ python3 runtimes.py --max_x=22
 and copy/paste the resulting table into this README file below this line.
 
 |  4.37E-06  |  2.22E-06 | 2.77E-06 |
+
 |  2.18E-06  |  7.63E-06 | 1.08E-05 |
+
 |  2.12E-06  |  1.50E-05 | 1.64E-05 |
+
 |  2.69E-06  |  3.45E-05 | 3.66E-05 |
+
 |  4.08E-06  |  7.88E-05 | 8.25E-05 |
+
 |  6.63E-06  |  1.77E-04 | 1.90E-04 |
 
 You should observe that python's built-in sort function is 10-100x faster than yours.
